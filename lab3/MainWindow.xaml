@@ -1,0 +1,26 @@
+﻿<Window x:Class="lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="20" HorizontalAlignment="Center">
+            <TextBlock Text="n = " Height="30" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBoxN" Width="30" Height="30" Margin="3" VerticalAlignment="Bottom" Text="4" TextChanged="textBoxN_TextChanged"/>
+            <TextBlock Text="f(x) = exp(-0.15x)sin(Pi(x + x^2))" Height="30"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" x:Name="stackPanelNodes"/>
+        <Button Grid.Row="2" x:Name="buttonStart" Content="Получить полиндром" Click="buttonStart_Click" Width="150" Height="30"/>
+        <TextBlock Grid.Row="3" x:Name="textBlockResult" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
