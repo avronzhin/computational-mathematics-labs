@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2", "lab2\lab2.csproj", "{5F013414-CAD2-457B-8398-7080E62BF295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3", "lab2\lab3.csproj", "{5F013414-CAD2-457B-8398-7080E62BF295}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "linear-system", "linear-system\linear-system.csproj", "{CA79C0D5-1125-40ED-B1C1-FD0D230BB0E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab1", "lab1\lab1.csproj", "{E664C85B-6143-45BB-A807-3BEE614667F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2", "lab1\lab2.csproj", "{E664C85B-6143-45BB-A807-3BEE614667F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "function-interpolation", "function-interpolation\function-interpolation.csproj", "{7B776FC0-E163-445B-BA52-D7DBA4B98584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "function-interpolation", "function-interpolation\function-interpolation.csproj", "{7B776FC0-E163-445B-BA52-D7DBA4B98584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A9BA0BAC-AA7F-4BB1-9855-B9BA44C83CF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A9BA0BAC-AA7F-4BB1-9855-B9BA44C83CF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab3", "lab3\lab3.csproj", "{AF85FBB2-995D-4C92-A086-EA71A400160F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab4", "lab3\lab4.csproj", "{AF85FBB2-995D-4C92-A086-EA71A400160F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

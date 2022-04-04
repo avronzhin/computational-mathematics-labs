@@ -1,33 +1,33 @@
-﻿namespace ComputationalMathematic
+﻿namespace lab2
 {
-    partial class MainForm
+  partial class MainForm
+  {
+    /// <summary>
+    /// Обязательная переменная конструктора.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Освободить все используемые ресурсы.
+    /// </summary>
+    /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        /// Обязательная переменная конструктора.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+      if (disposing && (components != null))
+      {
+        components.Dispose();
+      }
+      base.Dispose(disposing);
+    }
 
-        /// <summary>
-        /// Освободить все используемые ресурсы.
-        /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+    #region Код, автоматически созданный конструктором форм Windows
 
-        #region Код, автоматически созданный конструктором форм Windows
-
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    /// Требуемый метод для поддержки конструктора — не изменяйте 
+    /// содержимое этого метода с помощью редактора кода.
+    /// </summary>
+    private void InitializeComponent()
+    {
       this.textBoxA = new System.Windows.Forms.TextBox();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
@@ -235,16 +235,16 @@
       this.ResumeLayout(false);
       this.PerformLayout();
 
-        }
+    }
 
-        #endregion
+    #endregion
 
-        private System.Windows.Forms.TextBox textBoxA;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxB;
-        private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.Button buttonStart;
+    private System.Windows.Forms.TextBox textBoxA;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.TextBox textBoxB;
+    private System.Windows.Forms.Label labelResult;
+    private System.Windows.Forms.Button buttonStart;
     private System.Windows.Forms.GroupBox groupBox1;
     private System.Windows.Forms.RadioButton radioButtonIteration;
     private System.Windows.Forms.RadioButton radioButtonCombined;

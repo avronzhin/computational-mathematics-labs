@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ComputationalMathematic
+namespace lab2
 {
   public partial class MainForm : Form
   {

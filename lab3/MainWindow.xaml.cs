@@ -3,7 +3,7 @@ using System;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace lab3
+namespace lab4
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
@@ -12,6 +12,7 @@ namespace lab3
   {
     public MainWindow()
     {
+      System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
       InitializeComponent();
       int n = Int32.Parse(textBoxN.Text);
       GenerateNodes(n);
@@ -52,6 +53,7 @@ namespace lab3
 
     private StackPanel GetTextBoxesPanel(int size)
     {
+      double[] source = { 0, 0.2, 0.5, 0.8, 1, 1.2, 1.4, 1.6 };
       var stackPanel = new StackPanel()
       {
         Orientation = Orientation.Horizontal,
@@ -61,7 +63,7 @@ namespace lab3
       {
         TextBox textBox = new()
         {
-          Text = "0",
+          Text = $"{source[i]}",
           Width = 50,
           Height = 30,
           TextAlignment = TextAlignment.Center,
@@ -84,7 +86,11 @@ namespace lab3
       }
       double b = 0.15;
       double f(double x) => Math.Exp(-b * x) * Math.Sin(Math.PI * (x + Math.Pow(x, 2)));
-      textBlockResult.Text = InterpolationPolynomials.ConstructPolynomial(nodes, f);
+      var interpolationPolynomial = new InterpolationPolynomials(nodes, f);
+      var polynomial = interpolationPolynomial.ConstructPolynomial();
+      textBoxResult.Text = polynomial.ToString();
+      var graphicsWindow = new GraphicsWindow(f, polynomial.f, -0.5, 1.5);
+      graphicsWindow.Show();
     }
 
     private void textBoxN_TextChanged(object sender, TextChangedEventArgs e)
@@ -98,13 +104,12 @@ namespace lab3
           textBoxN.Text = $"{n}";
         }
         GenerateNodes(n);
-        if (textBlockResult is not null)
+        if (textBoxResult is not null)
         {
-          textBlockResult.Text = "";
+          textBoxResult.Text = "";
         }
       } catch { 
       }
-      
     }
   }
 }

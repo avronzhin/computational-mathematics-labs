@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using linear_system;
 
-namespace lab2
+namespace lab3
 {
   /// <summary>
   /// Interaction logic for MainWindow.xaml

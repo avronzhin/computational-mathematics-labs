@@ -1,44 +1,56 @@
 ﻿namespace function_interpolation
 {
-  public static class InterpolationPolynomials
+  public class InterpolationPolynomials
   {
-    public static double[] nodes;
-    public static Func<double, double> f;
+    public (double x, double y)[] nodes;
 
-
-    public static string ConstructPolynomial(double[] nodes, Func<double, double> f)
+    public InterpolationPolynomials(double[] arguments, Func<double, double> f)
     {
-      InterpolationPolynomials.nodes = nodes;
-      InterpolationPolynomials.f = f;
-      string polynomial = "L(x) = ";
-
-      polynomial += nodes[0] + "";
-      for (int i = 1; i < nodes.Length; i++)
+      var nodesCount = arguments.Length;
+      var nodes = new (double x, double y)[nodesCount];
+      for(int i = 0; i < nodesCount; i++)
       {
-        double differnce = Foo(0, i);
-        polynomial += (differnce > 0) ? " + " : " - ";
-        polynomial += $"{Math.Abs(differnce):F2}";
-        for (int j = 0; j < i; j++)
-        {
-          var xj = nodes[j];
-
-          polynomial += (xj == 0) ? "x" : $"(x - {nodes[j]})";
-        }
+        nodes[i].x = arguments[i];
+        nodes[i].y = f(arguments[i]);
       }
-      return polynomial;
+      this.nodes = nodes;
     }
 
-    private static double Foo(int i, int n)
+    public Polynomial ConstructPolynomial()
+    {
+      Polynomial pol = new();
+      for (int i = 0; i < nodes.Length; i++)
+      {
+        double dividedDiffirence = GetDividedDifferences(0, i);
+        List<double> rotes = GetGeneralizedDegreeRoots(i);
+        Monomial mon = new(dividedDiffirence, rotes);
+        pol.addMonomial(mon);
+      }
+      return pol;
+    }
+    
+    private List<double> GetGeneralizedDegreeRoots(int i)
+    {
+      List<double> roots = new List<double>();
+      for (int j = 0; j < i; j++)
+      {
+        var x = nodes[j].x;
+        roots.Add(x);
+      }
+      return roots;
+    } 
+
+    private double GetDividedDifferences(int i, int n)
     {
       if (n == 0)
       {
-        return 1;
+        return nodes[i].y;
       }
       if (n == 1)
       {
-        return (f(nodes[i + 1]) - f(nodes[i])) / (nodes[i + 1] - nodes[i]);
+        return ((nodes[i + 1].y) - (nodes[i].y)) / (nodes[i + 1].x - nodes[i].x);
       }
-      return (Foo(i + 1, n - 1) - Foo(i, n - 1)) / (nodes[i + n] - nodes[i]);
+      return (GetDividedDifferences(i + 1, n - 1) - GetDividedDifferences(i, n - 1)) / (nodes[i + n].x - nodes[i].x);
     }
   }
 }
