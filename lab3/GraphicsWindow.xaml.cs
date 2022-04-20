@@ -2,6 +2,7 @@
 using OxyPlot;
 using OxyPlot.Series;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace lab4

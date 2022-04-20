@@ -33,7 +33,6 @@
       result += $"{absCoef:F2}";
       foreach (var root in roots)
       {
-
         result += (root == 0) ? "x" : $"(x - {root})";
       }
       return result;

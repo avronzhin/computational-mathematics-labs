@@ -1,0 +1,48 @@
+﻿<Window x:Class="lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontSize="14">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Задание 1">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="f(x, y, y'):" VerticalAlignment="Center"/>
+                        <Image Source="/resources/f(x, y, y').jpg"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="f(x, y):" VerticalAlignment="Center"/>
+                        <Image Source="/resources/f(x, y).jpg"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="h =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxH" Width="30" Height="30" Margin="5" Text="0.1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="x0 =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxX0" Width="30" Height="30" Margin="5" Text="1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="xEnd =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxXEnd" Width="30" Height="30" Margin="5" Text="3"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="150">
+                        <TextBlock Text="y(x0) =" VerticalAlignment="Center"/>
+                        <Image Source="/resources/y0.jpg" Margin="5"/>
+                    </StackPanel>
+                    <Button x:Name="buttonStart" Content="Решить ОДУ" Margin="20" Width="100" Click="buttonStart_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Задание 2">
+
+            </TabItem>
+            <TabItem Header="Задание 3">
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
