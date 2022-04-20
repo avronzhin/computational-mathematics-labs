@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ordinary-differential-equation\ordinary-differential-equation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="resources\f(x, y).jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

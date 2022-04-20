@@ -9,8 +9,14 @@
         Title="GraphicsWindow" Height="450" Width="800">
     <Grid>
         <TabControl>
-            <TabItem Header="График">
-                <oxy:PlotView Model="{Binding FunctionModel}"/>
+            <TabItem Header="Полный шаг">
+                <oxy:PlotView Model="{Binding FullStepModel}"/>
+            </TabItem>
+            <TabItem Header="Удвоенный шаг">
+                <oxy:PlotView Model="{Binding DoubledStepModel}"/>
+            </TabItem>
+            <TabItem Header="Половина шага">
+                <oxy:PlotView Model="{Binding HalfStepModel}"/>
             </TabItem>
         </TabControl>
     </Grid>

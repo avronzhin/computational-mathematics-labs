@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3", "lab3\lab3.csproj", "{AF85FBB2-995D-4C92-A086-EA71A400160F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab5", "lab5\lab5.csproj", "{AF472025-C548-456B-A93F-7D522A829C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab5", "lab5\lab5.csproj", "{AF472025-C548-456B-A93F-7D522A829C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ordinary-differential-equation", "ordinary-differential-equation\ordinary-differential-equation.csproj", "{9C187022-0E80-45E6-82AD-0B48FD0155E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{AF472025-C548-456B-A93F-7D522A829C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF472025-C548-456B-A93F-7D522A829C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF472025-C548-456B-A93F-7D522A829C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C187022-0E80-45E6-82AD-0B48FD0155E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C187022-0E80-45E6-82AD-0B48FD0155E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C187022-0E80-45E6-82AD-0B48FD0155E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C187022-0E80-45E6-82AD-0B48FD0155E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

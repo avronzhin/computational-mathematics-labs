@@ -38,7 +38,7 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Задание 2">
-
+                <Button x:Name="buttonSecondTaskStart" Content="Решить" Margin="20" Width="100" Click="buttonSecondTaskStart_Click"/>
             </TabItem>
             <TabItem Header="Задание 3">
 
