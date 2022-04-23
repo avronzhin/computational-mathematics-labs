@@ -13,15 +13,20 @@
         var point = (x, y);
         result.Add(point);
 
-        double k1 = h * f(x, y);
-        double k2 = h * f(x + h / 2, y + k1 / 2);
-        double k3 = h * f(x + h / 2, y + k2 / 2);
-        double k4 = h * f(x + h, y + k3);
-
         x += h;
-        y += (k1 + 2 * k2 + 2 * k3 + k4) / 6;
+        y += getYIncrement(x, y, h, f);
       }
       return result;
+    }
+
+    private static double getYIncrement(double x, double y, double h, Func<double, double, double> f)
+    {
+
+      double k1 = h * f(x, y);
+      double k2 = h * f(x + h / 2, y + k1 / 2);
+      double k3 = h * f(x + h / 2, y + k2 / 2);
+      double k4 = h * f(x + h, y + k3);
+      return (k1 + 2 * k2 + 2 * k3 + k4) / 6; 
     }
 
     public static IList<(double, double, double)> Execute
@@ -40,20 +45,30 @@
         var point = (t, x, y);
         result.Add(point);
 
-        double k1 = h * f(t, x, y);
-        double m1 = h * g(t, x, y);
-        double k2 = h * f(t + h / 2, x + k1 / 2, y + m1 / 2);
-        double m2 = h * g(t + h / 2, x + k1 / 2, y + m1 / 2);
-        double k3 = h * f(t + h / 2, x + k2 / 2, y + m2 / 2);
-        double m3 = h * g(t + h / 2, x + k2 / 2, y + m2 / 2);
-        double k4 = h * f(t + h, x + k3, y + m3);
-        double m4 = h * g(t + h, x + k3, y + m3);
-
+        var increments = GetIncrements(h, f, g, t, x, y);
         t += h;
-        x += (k1 + 2 * k2 + 2 * k3 + k4) / 6;
-        y += (m1 + 2 * m2 + 2 * m3 + m4) / 6;
+        x += increments.xInrement;
+        y += increments.yIncrement;
       }
       return result;
+    }
+
+    private static (double xInrement, double yIncrement) GetIncrements(double h,
+      Func<double, double, double, double> f, Func<double, double, double, double> g, 
+      double t, double x, double y)
+    {
+      double k1 = h * f(t, x, y);
+      double m1 = h * g(t, x, y);
+      double k2 = h * f(t + h / 2, x + k1 / 2, y + m1 / 2);
+      double m2 = h * g(t + h / 2, x + k1 / 2, y + m1 / 2);
+      double k3 = h * f(t + h / 2, x + k2 / 2, y + m2 / 2);
+      double m3 = h * g(t + h / 2, x + k2 / 2, y + m2 / 2);
+      double k4 = h * f(t + h, x + k3, y + m3);
+      double m4 = h * g(t + h, x + k3, y + m3);
+
+      double xInrement = (k1 + 2 * k2 + 2 * k3 + k4) / 6;
+      double yIncrement = (m1 + 2 * m2 + 2 * m3 + m4) / 6;
+      return (xInrement, yIncrement);
     }
   }
 }
