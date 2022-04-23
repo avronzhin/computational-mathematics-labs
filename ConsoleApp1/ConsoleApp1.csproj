@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\function-interpolation\function-interpolation.csproj" />
+    <ProjectReference Include="..\linear-system\linear-system.csproj" />
   </ItemGroup>
 
 </Project>

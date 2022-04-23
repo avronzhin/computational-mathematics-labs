@@ -38,11 +38,72 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Задание 2">
-                <Button x:Name="buttonSecondTaskStart" Content="Решить" Margin="20" Width="100" Click="buttonSecondTaskStart_Click"/>
-            </TabItem>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="h =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxH_task2" Width="30" Height="30" Margin="5" Text="0.1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="t0 =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxT0" Width="30" Height="30" Margin="5" Text="0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="tEnd =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxTEnd" Width="30" Height="30" Margin="5" Text="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/resources/f(t, x, y).jpg"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="x(t0) =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxX0_task2" Width="30" Height="30" Margin="5" Text="1"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/resources/g(t, x, y).jpg"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="y(t0) =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxY0_task2" Width="30" Height="30" Margin="5" Text="0"/>
+                    </StackPanel>
+                    <Button x:Name="buttonSecondTaskStart" Content="Решить СОДУ" Margin="20" Width="100" Click="buttonSecondTaskStart_Click"/>
+                </StackPanel>
+                </TabItem>
             <TabItem Header="Задание 3">
-
-            </TabItem>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Уравнение"/>
+                    <StackPanel Orientation="Horizontal" Width="320">
+                        <TextBlock Text="y'' + " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxA1" Width="30" Height="30" Margin="5" Text="0"/>
+                        <TextBlock Text="y' + " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxA2" Width="30" Height="30" Margin="5" Text="1"/>
+                        <TextBlock Text="y = 0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="Ограничения"/>
+                    <StackPanel Orientation="Horizontal" Width="320">
+                        <TextBox x:Name="textBoxK0" Width="40" Height="30" Margin="5" Text="1"/>
+                        <TextBlock Text=" y(a) + " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxK1" Width="40" Height="30" Margin="5" Text="0"/>
+                        <TextBlock Text=" y'(a) = " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxA" Width="40" Height="30" Margin="5" Text="3"/>
+                        <TextBlock Text="; a = " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxX0_task3" Width="40" Height="30" Margin="5" Text="-1.57"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="320">
+                        <TextBox x:Name="textBoxM0" Width="40" Height="30" Margin="5" Text="0"/>
+                        <TextBlock Text=" y(a) + " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxM1" Width="40" Height="30" Margin="5" Text="1"/>
+                        <TextBlock Text=" y'(a) = " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxB" Width="40" Height="30" Margin="5" Text="0"/>
+                        <TextBlock Text="; b = " VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxXEnd_task3" Width="40" Height="30" Margin="5" Text="4.71"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Text="h =" VerticalAlignment="Center"/>
+                        <TextBox x:Name="textBoxH_task3" Width="30" Height="30" Margin="5" Text="0.1"/>
+                    </StackPanel>
+                    <Button x:Name="buttonThirdTaskStart" Content="Решить ОДУ" Click="buttonThirdTaskStart_Click"/>
+                </StackPanel>
+                </TabItem>
         </TabControl>
     </Grid>
 </Window>
