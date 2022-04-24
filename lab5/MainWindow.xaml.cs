@@ -23,8 +23,10 @@ namespace lab5
         double h = double.Parse(textBoxH.Text);
         double x0 = double.Parse(textBoxX0.Text);
         double xEnd = double.Parse(textBoxXEnd.Text);
-        double y0 = Math.Atan(2 - Math.E);
-        double f(double x, double y) => 3 * Math.Exp(x) * Math.Tan(y) * Math.Pow(Math.Cos(x), 2) / (Math.Exp(x) - 2);
+        double y0 = double.Parse(textBoxY0.Text);
+
+        static double f(double x, double y) => - y * Math.Log(y) / x;
+        
         IList<(double, double)> pointsWithFullStep = RungeKuttaMethod.Execute(f, x0, y0, xEnd, h);
         IList<(double, double)> pointsWithDoubledStep = RungeKuttaMethod.Execute(f, x0, y0, xEnd, h * 2);
         IList<(double, double)> pointsWithHalfStep = RungeKuttaMethod.Execute(f, x0, y0, xEnd, h / 2);
@@ -45,8 +47,12 @@ namespace lab5
         double tEnd = double.Parse(textBoxTEnd.Text);
         double x0 = double.Parse(textBoxX0_task2.Text);
         double y0 = double.Parse(textBoxY0_task2.Text);
-        double f(double t, double x, double y) => Math.Pow(t, 2) + Math.Pow(y, 2);
-        double g(double t, double x, double y) => t * x * y;
+
+        //double f(double t, double x, double y) => Math.Pow(t, 2) + Math.Pow(y, 2);
+        //double g(double t, double x, double y) => t * x * y;
+
+        double f(double t, double x, double y) => Math.Atan(t * t + y * y);
+        double g(double t, double x, double y) => Math.Sin(t + x);
 
         IList<(double, double, double)> pointsWithFullStep = RungeKuttaMethod.Execute(t0, tEnd, h, f, x0, g, y0);
         IList<(double, double, double)> pointsWithDoubledStep = RungeKuttaMethod.Execute(t0, tEnd, h * 2, f, x0, g, y0);

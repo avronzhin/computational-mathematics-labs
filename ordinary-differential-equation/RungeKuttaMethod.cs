@@ -47,13 +47,13 @@
 
         var increments = GetIncrements(h, f, g, t, x, y);
         t += h;
-        x += increments.xInrement;
+        x += increments.xIncrement;
         y += increments.yIncrement;
       }
       return result;
     }
 
-    private static (double xInrement, double yIncrement) GetIncrements(double h,
+    private static (double xIncrement, double yIncrement) GetIncrements(double h,
       Func<double, double, double, double> f, Func<double, double, double, double> g, 
       double t, double x, double y)
     {
@@ -66,9 +66,9 @@
       double k4 = h * f(t + h, x + k3, y + m3);
       double m4 = h * g(t + h, x + k3, y + m3);
 
-      double xInrement = (k1 + 2 * k2 + 2 * k3 + k4) / 6;
+      double xIncrement = (k1 + 2 * k2 + 2 * k3 + k4) / 6;
       double yIncrement = (m1 + 2 * m2 + 2 * m3 + m4) / 6;
-      return (xInrement, yIncrement);
+      return (xIncrement, yIncrement);
     }
   }
 }

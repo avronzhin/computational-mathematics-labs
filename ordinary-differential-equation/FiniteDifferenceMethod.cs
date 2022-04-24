@@ -17,7 +17,7 @@ namespace ordinary_differential_equation
     }
 
     public class Limitation
-    { 
+    {
       public double X { get; }
       public double K0 { get; }
       public double K1 { get; }
@@ -27,12 +27,12 @@ namespace ordinary_differential_equation
       {
         this.X = x;
         this.K0 = k0;
-        this.K1 = k1; 
+        this.K1 = k1;
         this.A = a;
       }
     }
 
-    public static IList<(double, double)> Execute(HomogeneousLinearEquation equation, 
+    public static IList<(double, double)> Execute(HomogeneousLinearEquation equation,
       Limitation bottomLimition, Limitation topLimition, double h)
     {
       double a = bottomLimition.X;
@@ -46,7 +46,7 @@ namespace ordinary_differential_equation
 
       var vector = LinearSystemSolver.GaussSolve(augMatrix).ResultVector;
       var x = a;
-      return vector.ToList().ConvertAll<(double, double)>(it => (x+=h, it));
+      return vector.ToList().ConvertAll<(double, double)>(it => (x += h, it));
     }
 
     private static void FillBottomLimition(this AugmentedMatrix augmentedMatrix, Limitation bottomLimition, double h)

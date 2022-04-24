@@ -9,10 +9,8 @@
 
   <ItemGroup>
     <None Remove="resources\f%28t, x, y%29.jpg" />
-    <None Remove="resources\f%28x, y%29.jpg" />
     <None Remove="resources\f%28x, y, y%27%29.jpg" />
     <None Remove="resources\g%28t, x, y%29.jpg" />
-    <None Remove="resources\y0.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,16 +26,10 @@
     <Resource Include="resources\f(t, x, y).jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="resources\f(x, y).jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="resources\f(x, y, y').jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="resources\g(t, x, y).jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\y0.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
