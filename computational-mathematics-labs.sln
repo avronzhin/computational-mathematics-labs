@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3", "lab2\lab3.csproj", "{5F013414-CAD2-457B-8398-7080E62BF295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab3", "lab3\lab3.csproj", "{5F013414-CAD2-457B-8398-7080E62BF295}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "linear-system", "linear-system\linear-system.csproj", "{CA79C0D5-1125-40ED-B1C1-FD0D230BB0E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2", "lab1\lab2.csproj", "{E664C85B-6143-45BB-A807-3BEE614667F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2", "lab2\lab2.csproj", "{E664C85B-6143-45BB-A807-3BEE614667F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "function-interpolation", "function-interpolation\function-interpolation.csproj", "{7B776FC0-E163-445B-BA52-D7DBA4B98584}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab4", "lab3\lab4.csproj", "{AF85FBB2-995D-4C92-A086-EA71A400160F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab4", "lab4\lab4.csproj", "{AF85FBB2-995D-4C92-A086-EA71A400160F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab5", "lab5\lab5.csproj", "{AF472025-C548-456B-A93F-7D522A829C9A}"
 EndProject
